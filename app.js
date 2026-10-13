@@ -88,12 +88,14 @@ const categoryIcons = {
   backend: "server",
   database: "database",
   ai: "brain-circuit",
+  tools: "wrench",
 };
 const categoryLabels = {
   frontend: "Frontend",
   backend: "Backend",
   database: "Bases de datos",
   ai: "IA e integraciones",
+  tools: "Herramientas",
 };
 const technologyIcons = {
   "vue 3": "vue",
@@ -126,6 +128,10 @@ const technologyIcons = {
   github: "github_dark",
   sequelize: "sequelize",
   apollo: "apollo",
+  materialui: "materialui",
+  zod: "zod",
+  git: "git",
+  vite: "vite",
 };
 const renderTechnologyIcon = (technology) => {
   const icon = technologyIcons[technology.toLowerCase()];
@@ -158,15 +164,21 @@ profileData.projects.forEach((project) => {
   card.className =
     "group card-glow bg-slate-900/50 backdrop-blur-sm border border-slate-800/80 rounded-2xl overflow-hidden";
 
-  const repoBtn =
-    project.isPrivate || !project.repository
+  const repositories =
+    project.repositories ||
+    (project.repository ? [{ label: "Código", url: project.repository }] : []);
+  const repoBtn = project.isPrivate
       ? `<span class="px-4 py-2.5 bg-slate-800/60 text-slate-500 text-sm font-medium rounded-xl cursor-not-allowed flex items-center gap-2">
          <i data-lucide="lock" class="w-4 h-4"></i> Privado
        </span>`
-      : `<a href="${project.repository}" target="_blank" rel="noopener noreferrer"
+      : repositories
+          .map(
+            (repository) => `<a href="${repository.url}" target="_blank" rel="noopener noreferrer"
          class="btn-shine px-4 py-2.5 bg-slate-800/80 hover:bg-slate-700/80 text-white text-sm font-medium rounded-xl transition-all border border-slate-700/50 flex items-center gap-2">
-         <i data-lucide="code-xml" class="w-4 h-4"></i> Código
-       </a>`;
+         <i data-lucide="code-xml" class="w-4 h-4"></i> ${repository.label}
+       </a>`,
+          )
+          .join("");
 
   const domainBtn =
     project.domain && project.domain !== "Sin dominio"
@@ -177,10 +189,11 @@ profileData.projects.forEach((project) => {
       : `<span class="px-4 py-2.5 bg-slate-800/60 text-slate-500 text-sm font-medium rounded-xl flex items-center gap-2">
          <i data-lucide="globe" class="w-4 h-4"></i> Sin Dominio
        </span>`;
-  const projectType =
-    project.type === "independent"
-      ? "Proyecto independiente"
-      : "Pangea Renuevo Solutions";
+  const projectType = {
+    independent: "Proyecto independiente",
+    company: "Pangea Renuevo Solutions",
+    academic: "Proyecto universitario",
+  }[project.type];
 
   card.innerHTML = `
     <div class="flex flex-col">
@@ -220,7 +233,7 @@ lucide.createIcons();
 new Typed("#user-title", {
   strings: [
     profileData.title,
-    "Arquitecturas y productos web",
+    "Arquitectura de productos web",
     "Integración de servicios de IA",
   ],
   typeSpeed: 45,

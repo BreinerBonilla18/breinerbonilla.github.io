@@ -4,7 +4,7 @@ export const profileData = {
   location: "Táchira, Venezuela",
   experienceYears: "3.5+",
   summary:
-    "Desarrollador Fullstack con más de 3 años de experiencia creando aplicaciones web para productos empresariales y proyectos independientes. Especializado en desarrollo frontend con React y Vue, con experiencia colaborando en backend, diseñando arquitecturas completas e integrando servicios de IA. Enfoque en interfaces cuidadas, soluciones prácticas y experiencias Local-First.",
+    "Desarrollador Fullstack con más de 3 años de experiencia creando aplicaciones web para productos empresariales, proyectos académicos e independientes. Especializado en frontend con React y Vue, con experiencia en backend y en el diseño de arquitecturas completas. Integro servicios de IA y construyo experiencias Local-First, con enfoque en interfaces responsivas, soluciones prácticas y trabajo en equipo.",
   contact: {
     github: "https://github.com/BreinerBonilla18",
     email: "bonillabreiner296@gmail.com",
@@ -29,18 +29,26 @@ export const profileData = {
       "TypeScript",
       "Pinia",
     ],
-    backend: ["Node.js", "Express", "APIs REST", "GraphQL", "Apollo", "Sequelize"],
+    backend: [
+      "Node.js",
+      "Express",
+      "APIs REST",
+      "GraphQL",
+      "Apollo",
+      "Sequelize",
+    ],
     database: ["IndexedDB", "Dexie.js", "PostgreSQL", "SQLite", "Supabase"],
     ai: ["Gemini API", "Groq API", "OpenRouter API"],
+    tools: ["Git", "Vite"],
   },
   projects: [
     {
       id: "langbox",
       title: "LangBox",
       type: "independent",
-      role: "Arquitectura y desarrollo integral del proyecto",
+      role: "Fullstack Developer — arquitectura y desarrollo integral",
       description:
-        "PWA offline-first para aprender idiomas: busca palabras con IA, las guarda en tu vocabulario local y las repasa con flashcards usando repetición espaciada SM-2. Funciona sin internet y sincroniza opcionalmente con Supabase.",
+        "LangBox es una plataforma de aprendizaje de inglés que busca hacer accesible, práctico y significativo el estudio del vocabulario para cualquier persona, combinando búsqueda inteligente de palabras, vocabulario personal y repaso con flashcards, incluso sin conexión a internet.",
       repository: "https://github.com/BreinerBonilla18/LangBox",
       isPrivate: false,
       domain: "https://langbox-kappa.vercel.app/",
@@ -61,7 +69,7 @@ export const profileData = {
       id: "palabra-de-vida",
       title: "Palabra de Vida",
       type: "company",
-      role: "Desarrollo 100% del frontend y colaboración en el backend",
+      role: "Frontend Developer — desarrollo completo del frontend y apoyo en backend",
       description:
         "Plataforma interdenominacional que busca hacer accesible, atractiva y significativa la Palabra de Dios para todas las personas, sin importar su edad, trasfondo o creencia.",
       repository: "",
@@ -83,7 +91,7 @@ export const profileData = {
       id: "agendate-ya",
       title: "Agéndate Ya",
       type: "company",
-      role: "Desarrollador frontend como parte del equipo",
+      role: "Frontend Developer — desarrollo de interfaces en equipo multidisciplinario",
       description:
         "Plataforma de gestión de citas que conecta a personas y comercios, y que busca hacer simple, innovadora y cercana la experiencia de agendar, actuando con empatía, eficiencia y compromiso.",
       repository: "",
@@ -96,10 +104,74 @@ export const profileData = {
         "React Bootstrap",
         "GraphQL",
         "Node.js",
+        "Express",
         "React Icons",
         "Apollo",
       ],
       image: "./assets/images/agendateya-preview.png",
+    },
+    {
+      id: "teneria",
+      title: "Tenería Rubio",
+      type: "academic",
+      role: "Frontend Developer — implementación de interfaces y componentes",
+      description:
+        "Tenería Rubio es una plataforma de gestión que centraliza productos, proveedores y reportes de la empresa Tenería Rubio C.A., ubicada en el municipio Junín, estado Táchira, y que busca optimizar sus operaciones con eficiencia y control.",
+      repositories: [
+        {
+          label: "Frontend",
+          url: "https://github.com/Anthonynino/TeneriaFront",
+        },
+        {
+          label: "Backend",
+          url: "https://github.com/Anthonynino/TeneriaBack",
+        },
+      ],
+      isPrivate: false,
+      domain: "",
+      technologies: [
+        "React",
+        "Bootstrap",
+        "PostgreSQL",
+        "React Bootstrap",
+        "Node.js",
+        "React Icons",
+        "MaterialUI",
+        "Sequelize",
+        "Express",
+        "Zod",
+      ],
+      image: "./assets/images/teneria-preview.png",
+    },
+    {
+      id: "araguaney",
+      title: "Comunidad Araguaney",
+      type: "academic",
+      role: "Fullstack Developer — arquitectura y desarrollo integral",
+      description:
+        "Comunidad Araguaney es un sistema de gestión para consejos comunales venezolanos, ubicado en el municipio Junín, estado Táchira, que centraliza la administración de familias, beneficios sociales, proyectos, constancias, documentos, finanzas y voceros, con el fin de fortalecer la organización y el servicio a la comunidad.",
+      repositories: [
+        {
+          label: "Frontend",
+          url: "https://github.com/BreinerBonilla18/comunidad-araguaney-front",
+        },
+        {
+          label: "Backend",
+          url: "https://github.com/BreinerBonilla18/comunidad-araguaney-back",
+        },
+      ],
+      isPrivate: false,
+      domain: "",
+      technologies: [
+        "React",
+        "Tailwind 4",
+        "PostgreSQL",
+        "Node.js",
+        "React Icons",
+        "MaterialUI",
+        "Express",
+      ],
+      image: "./assets/images/comunidad-araguaney-preview.png",
     },
   ],
 };
