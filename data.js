@@ -1,36 +1,105 @@
 export const profileData = {
   name: "Breiner Orlando Bonilla Villamizar",
-  title: "Fullstack Software Engineer | TSU en Informática",
+  title: "Desarrollador Fullstack",
   location: "Táchira, Venezuela",
   experienceYears: "3.5+",
-  summary: "Desarrollador Fullstack con más de 3 años de experiencia en la construcción de aplicaciones web sólidas, arquitecturas Local-First e integración de modelos de Inteligencia Artificial. Enfoque orientado a rendimiento, código limpio y valor de negocio real.",
+  summary:
+    "Desarrollador Fullstack con más de 3 años de experiencia creando aplicaciones web para productos empresariales y proyectos independientes. Especializado en desarrollo frontend con React y Vue, con experiencia colaborando en backend, diseñando arquitecturas completas e integrando servicios de IA. Enfoque en interfaces cuidadas, soluciones prácticas y experiencias Local-First.",
   contact: {
     github: "https://github.com/BreinerBonilla18",
-    email: "bonillabreiner296@gmail.com"
+    email: "bonillabreiner296@gmail.com",
   },
   experience: [
     {
       company: "Pangea Renuevo Solutions",
-      role: "Frontend / Fullstack Developer",
+      role: "Fullstack Developer",
       period: "3+ años",
-      description: "Desarrollo y mantenimiento de plataformas web empresariales, optimización de interfaces de usuario y maquetación de arquitecturas frontend."
-    }
+      description:
+        "Desarrollo y mantenimiento de plataformas web empresariales, optimización de interfaces de usuario y maquetación de arquitecturas.",
+    },
   ],
   skills: {
-    frontend: ["Vue 3", "React", "Tailwind CSS", "JavaScript (ES6+)", "TypeScript", "Pinia"],
-    backend: ["Node.js", "Express", "APIs REST", "Google Gemini API", "GraphQL"],
-    database: ["IndexedDB (Dexie.js)", "PostgreSQL", "Supabase (Auth/OAuth)"]
+    frontend: [
+      "Vue 3",
+      "React",
+      "Tailwind CSS",
+      "Bootstrap",
+      "React Bootstrap",
+      "JavaScript",
+      "TypeScript",
+      "Pinia",
+    ],
+    backend: ["Node.js", "Express", "APIs REST", "GraphQL", "Apollo", "Sequelize"],
+    database: ["IndexedDB", "Dexie.js", "PostgreSQL", "SQLite", "Supabase"],
+    ai: ["Gemini API", "Groq API", "OpenRouter API"],
   },
   projects: [
     {
       id: "langbox",
       title: "LangBox",
-      description: "Aplicación web Local-First para el aprendizaje de vocabulario en inglés. Integra la API de Google Gemini para la extracción automatizada de contexto y un sistema de repetición espaciada (SRS) mediante flashcards para retención a largo plazo.",
+      type: "independent",
+      role: "Arquitectura y desarrollo integral del proyecto",
+      description:
+        "PWA offline-first para aprender idiomas: busca palabras con IA, las guarda en tu vocabulario local y las repasa con flashcards usando repetición espaciada SM-2. Funciona sin internet y sincroniza opcionalmente con Supabase.",
       repository: "https://github.com/BreinerBonilla18/LangBox",
       isPrivate: false,
       domain: "https://langbox-kappa.vercel.app/",
-      technologies: ["Vue 3", "Tailwind 4", "Supabase", "Gemini API", "Pinia", "Dexie.js", "Lucide Icons"],
-      image: "https://via.placeholder.com/600x350/1e293b/f8fafc?text=LangBox+Preview"
-    }
-  ]
+      technologies: [
+        "Vue 3",
+        "Tailwind 4",
+        "Supabase",
+        "Gemini API",
+        "Groq API",
+        "OpenRouter API",
+        "Pinia",
+        "Dexie.js",
+        "Lucide Icons",
+      ],
+      image: "./assets/images/langbox-preview.png",
+    },
+    {
+      id: "palabra-de-vida",
+      title: "Palabra de Vida",
+      type: "company",
+      role: "Desarrollo 100% del frontend y colaboración en el backend",
+      description:
+        "Plataforma interdenominacional que busca hacer accesible, atractiva y significativa la Palabra de Dios para todas las personas, sin importar su edad, trasfondo o creencia.",
+      repository: "",
+      isPrivate: true,
+      domain: "https://labibliapalabradevida.com/",
+      technologies: [
+        "React",
+        "Bootstrap",
+        "PostgreSQL",
+        "React Bootstrap",
+        "GraphQL",
+        "React Icons",
+        "Sequelize",
+        "Apollo",
+      ],
+      image: "./assets/images/labibliapalabradevida-preview.png",
+    },
+    {
+      id: "agendate-ya",
+      title: "Agéndate Ya",
+      type: "company",
+      role: "Desarrollador frontend como parte del equipo",
+      description:
+        "Plataforma de gestión de citas que conecta a personas y comercios, y que busca hacer simple, innovadora y cercana la experiencia de agendar, actuando con empatía, eficiencia y compromiso.",
+      repository: "",
+      isPrivate: true,
+      domain: "https://agendateya.com.uy/",
+      technologies: [
+        "React",
+        "Bootstrap",
+        "PostgreSQL",
+        "React Bootstrap",
+        "GraphQL",
+        "Node.js",
+        "React Icons",
+        "Apollo",
+      ],
+      image: "./assets/images/agendateya-preview.png",
+    },
+  ],
 };

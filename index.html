@@ -1,40 +1,147 @@
-<!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
-<head>
+<!doctype html>
+<html lang="es">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Breiner Bonilla - Fullstack Software Engineer</title>
+    <meta
+      name="description"
+      content="Breiner Bonilla — Desarrollador Fullstack con más de 3 años de experiencia en productos empresariales y proyectos independientes con React, Vue, backend e integración de IA."
+    />
+    <meta name="author" content="Breiner Orlando Bonilla Villamizar" />
+    <title>Breiner Bonilla — Desarrollador Fullstack</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
-    <header class="max-w-5xl mx-auto px-6 py-20 min-h-[50vh] flex flex-col justify-center">
-        <span class="text-indigo-400 font-mono text-sm tracking-wider uppercase mb-2">Portafolio Profesional</span>
-        <h1 id="user-name" class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-4"></h1>
-        <h2 id="user-title" class="text-xl sm:text-2xl font-medium text-slate-400 mb-6"></h2>
-        <p id="user-summary" class="text-slate-300 max-w-2xl text-lg leading-relaxed mb-8"></p>
-        <div id="user-links" class="flex gap-4"></div>
-    </header>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
 
-    <main class="max-w-5xl mx-auto px-6 space-y-20 pb-20">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="bg-slate-950 text-slate-100 font-sans antialiased">
+    <!-- ═══ Background Effects ═══ -->
+    <div class="gradient-bg" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+    <!-- ═══ Main Content ═══ -->
+    <div class="relative z-10">
+      <!-- HERO / HEADER -->
+      <header
+        id="hero"
+        class="max-w-5xl mx-auto px-6 pt-24 pb-20 min-h-[90vh] flex flex-col justify-center relative"
+      >
+        <h1
+          id="user-name"
+          class="hero-element text-5xl sm:text-7xl font-extrabold tracking-tight text-white mb-5 leading-[1.1]"
+        ></h1>
+
+        <h2
+          class="hero-element text-xl sm:text-2xl font-medium text-slate-400 mb-6 min-h-[2rem]"
+        >
+          <span id="user-title"></span>
+        </h2>
+
+        <p
+          id="user-summary"
+          class="hero-element text-slate-400 max-w-2xl text-lg leading-relaxed mb-10"
+        ></p>
+
+        <div id="user-links" class="hero-element flex flex-wrap gap-4"></div>
+
+        <!-- Scroll indicator -->
+        <div
+          class="scroll-indicator-wrap absolute bottom-10 left-1/2 -translate-x-1/2"
+        >
+          <div class="scroll-indicator text-slate-600">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 5v14" />
+              <path d="m5 12 7 7 7-7" />
+            </svg>
+          </div>
+        </div>
+      </header>
+
+      <!-- MAIN SECTIONS -->
+      <main class="max-w-5xl mx-auto px-6 space-y-28 pb-20">
         <!-- EXPERIENCIA LABORAL -->
-        <section>
-            <h3 class="text-2xl font-bold text-white mb-6 border-b border-slate-800 pb-3">Experiencia Laboral</h3>
-            <div id="experience-container" class="space-y-6"></div>
+        <section class="reveal">
+          <div class="flex items-center gap-3 mb-8">
+            <div
+              class="section-icon w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center"
+            >
+              <i data-lucide="briefcase" class="w-5 h-5 text-indigo-400"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Experiencia Laboral</h3>
+          </div>
+          <div id="experience-container" class="space-y-4"></div>
         </section>
 
-        <!-- TECH STACK -->
-        <section>
-            <h3 class="text-2xl font-bold text-white mb-6 border-b border-slate-800 pb-3">Habilidades Técnicas</h3>
-            <div id="skills-container" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+        <!-- HABILIDADES TÉCNICAS -->
+        <section class="reveal">
+          <div class="flex items-center gap-3 mb-8">
+            <div
+              class="section-icon w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center"
+            >
+              <i data-lucide="layers" class="w-5 h-5 text-indigo-400"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Habilidades Técnicas</h3>
+          </div>
+          <div
+            id="skills-container"
+            class="grid grid-cols-1 md:grid-cols-3 gap-4"
+          ></div>
         </section>
 
-        <!-- PROYECTOS -->
-        <section>
-            <h3 class="text-2xl font-bold text-white mb-6 border-b border-slate-800 pb-3">Proyectos Destacados</h3>
-            <div id="projects-container" class="grid grid-cols-1 gap-10"></div>
+        <!-- PROYECTOS DESTACADOS -->
+        <section class="reveal">
+          <div class="flex items-center gap-3 mb-8">
+            <div
+              class="section-icon w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center"
+            >
+              <i data-lucide="rocket" class="w-5 h-5 text-indigo-400"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Proyectos Destacados</h3>
+          </div>
+          <div id="projects-container" class="space-y-8"></div>
         </section>
-    </main>
+      </main>
+    </div>
+
+    <!-- ═══ Libraries (CDN) ═══ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 
     <script type="module" src="./app.js"></script>
-</body>
+  </body>
 </html>
