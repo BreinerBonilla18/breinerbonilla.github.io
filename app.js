@@ -212,7 +212,7 @@ profileData.projects.forEach((project) => {
             ${[...project.technologies, "Y más"].map((t) => `<span class="tech-badge inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-800/50 text-indigo-300 border border-indigo-500/15 rounded-lg text-xs font-mono">${renderTechnologyIcon(t)}${t}</span>`).join("")}
           </div>
         </div>
-        <div class="flex gap-3 pt-5 border-t border-slate-800/60">
+        <div class="project-actions flex flex-wrap gap-3 pt-5 border-t border-slate-800/60">
           ${repoBtn}
           ${domainBtn}
         </div>

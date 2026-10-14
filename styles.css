@@ -2,6 +2,34 @@
    Custom Styles — Breiner Bonilla Portfolio
    ═══════════════════════════════════════════ */
 
+/* ── Responsive Foundations ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
+}
+
+.hero-name {
+  font-size: clamp(2.25rem, 7.3vw, 4.5rem);
+  overflow-wrap: anywhere;
+}
+
+.reveal,
+#hero,
+main,
+section,
+.card-glow {
+  min-width: 0;
+}
+
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #0f172a; }
@@ -144,6 +172,48 @@
 @media (max-width: 640px) {
   .project-image-wrap {
     aspect-ratio: 4 / 3;
+  }
+
+  #hero {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  main.max-w-5xl {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  #hero {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  .card-glow {
+    overflow-wrap: anywhere;
+  }
+
+  .card-glow .p-6,
+  .card-glow .p-7 {
+    padding: 1.25rem;
+  }
+
+  .project-actions > a,
+  .project-actions > span {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+}
+
+@media (max-height: 600px) and (max-width: 768px) {
+  #hero {
+    min-height: auto;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+  }
+
+  .scroll-indicator-wrap {
+    display: none;
   }
 }
 
